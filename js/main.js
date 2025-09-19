@@ -4,10 +4,13 @@ const form = document.getElementById('vehiculo-form');
 const contenedor = document.getElementById('contenedor-tarjetas');
 const addBtn = document.getElementById('agregar-vehiculo');
 
+
 form.addEventListener('submit', (e) => {
 
 
     e.preventDefault();
+
+    
 
     const valorFoto = document.getElementById('foto-input').value;
     const valorNombre = document.getElementById('nombre-input').value;
@@ -90,6 +93,7 @@ function createVehiculoCard(valorFoto, valorNombre, valorMarca, valorModelo, val
 
     return col;
 
+
 };
 
 
@@ -108,7 +112,8 @@ function addVehiculoCard(event) {
         }
         else {
             const nuevaTarjeta = createVehiculoCard(valorFoto, valorNombre, valorMarca, valorModelo, valorKm, valorPrecio);
-            contenedor.appendChild(nuevaTarjeta)
+            contenedor.appendChild(nuevaTarjeta);
+            eventsToVehiculo(nuevaTarjeta);
 
             form.reset();
         }
@@ -116,3 +121,20 @@ function addVehiculoCard(event) {
 };
 
 addVehiculoCard();
+
+
+function eventsToVehiculo(nuevaTarjeta) {
+    const deleteBtn = nuevaTarjeta.querySelector('.btn-danger');
+
+    deleteBtn.addEventListener('click', () => {
+        nuevaTarjeta.remove();
+    });
+
+    const shopBtn = nuevaTarjeta.querySelector('.btn-success');
+
+    shopBtn.addEventListener('click', () => {
+        alert('Has comprado nuestro vehículo');
+    })
+
+}
+
