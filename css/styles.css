@@ -49,6 +49,7 @@ body {
     background: var(--background-color);
     border-radius: 20px;
     padding: 50px;
+    
 }
 
 #form h2 {
@@ -83,12 +84,13 @@ body {
 #cont-cards {
    
     border-radius: 20px;
-    padding: 10px;
+    padding: 50px;
 }
 
 #cont-cards h2 {
     text-align: center;
     color: var(--text-principal-color);
+    padding-bottom: 20px;
 }
 
 #contenedor-tarjetas {

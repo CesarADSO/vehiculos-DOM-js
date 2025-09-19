@@ -34,7 +34,7 @@ function createVehiculoCard(url, valorNombre, valorMarca, valorModelo, valorKm, 
     col.classList.add('col-md-6', 'item-vehiculo');
 
     const card = document.createElement('div');
-    card.classList.add('card', 'h-100');
+    card.classList.add('card', 'h-100', 'tarjeta');
 
     const imagen = document.createElement('img');
     imagen.classList.add('card-img-top', 'w-100');
@@ -65,15 +65,15 @@ function createVehiculoCard(url, valorNombre, valorMarca, valorModelo, valorKm, 
     h2.textContent = valorPrecio;
 
     const contenedorBtns = document.createElement('div');
-    contenedorBtns.classList.add('d-flex', 'justify-content-between', 'mt-3');
+    contenedorBtns.classList.add('d-flex', 'justify-content-between', 'mt-4', 'contenedor-botones');
 
     const boton1 = document.createElement('button');
     boton1.classList.add('btn', 'btn-success');
-    boton1.textContent = 'Comprar'
+    boton1.innerHTML = '<i class="bi bi-cart4"></i>';
 
     const boton2 = document.createElement('button');
     boton2.classList.add('btn', 'btn-danger');
-    boton2.textContent = 'Eliminar'
+    boton2.innerHTML = '<i class="bi bi-trash3-fill"></i>';
 
 
 
@@ -88,6 +88,7 @@ function createVehiculoCard(url, valorNombre, valorMarca, valorModelo, valorKm, 
     cuerpoTarjeta.appendChild(segundoH4);
     cuerpoTarjeta.appendChild(tercerH4);
     cuerpoTarjeta.appendChild(h2);
+    cuerpoTarjeta.appendChild(contenedorBtns);
 
 
     contenedorBtns.appendChild(boton1);
@@ -135,7 +136,7 @@ function eventsToVehiculo(nuevaTarjeta) {
     const shopBtn = nuevaTarjeta.querySelector('.btn-success');
 
     shopBtn.addEventListener('click', () => {
-        alert('Has comprado nuestro vehículo');
+        alert('Contactanos a nuestro whatsapp 3219219323');
     })
 
 }
