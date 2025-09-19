@@ -26,7 +26,9 @@ form.addEventListener('submit', (e) => {
 });
 
 
-function createVehiculoCard(valorFoto, valorNombre, valorMarca, valorModelo, valorKm, valorPrecio) {
+function createVehiculoCard(url, valorNombre, valorMarca, valorModelo, valorKm, valorPrecio) {
+
+    const fotoFinal = url || 'https://revistadiners.com.co/wp-content/uploads/2019/06/audi_1200x800.jpg';
 
     const col = document.createElement('div');
     col.classList.add('col-md-6', 'item-vehiculo');
@@ -36,8 +38,8 @@ function createVehiculoCard(valorFoto, valorNombre, valorMarca, valorModelo, val
 
     const imagen = document.createElement('img');
     imagen.classList.add('card-img-top', 'w-100');
-    imagen.setAttribute('src', valorFoto);
-    imagen.setAttribute('alt', 'Foto vehiculo');
+    imagen.setAttribute('src', fotoFinal);
+    
 
     const cuerpoTarjeta = document.createElement('div');
     cuerpoTarjeta.classList.add('card-body');
@@ -107,7 +109,7 @@ function addVehiculoCard(event) {
         const valorKm = document.getElementById('kilometraje-input').value;
         const valorPrecio = document.getElementById('precio-input').value;
 
-        if (valorFoto == "" || valorNombre == "" || valorMarca == "" || valorModelo == "" || valorKm == "" || valorPrecio == "") {
+        if ( valorNombre == "" || valorMarca == "" || valorModelo == "" || valorKm == "" || valorPrecio == "") {
             alert('Por favor es obligatorio llenar todos los campos que están en la interfaz');
         }
         else {
