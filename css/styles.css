@@ -1,3 +1,135 @@
-/* body {
-    background: #000;
-} */
+/* CONFIGURACIÓN BÁSICA DE UN ARCHIVO CSS */
+
+/* 1. TIPOGRAFÍAS */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+
+/* 2. ICONOS */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+/* 3. ESTILOS GENERALES */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Pacifico", cursive;
+}
+
+p,
+a,
+button,
+li,
+label,
+input,
+select,
+textarea,
+span {
+    font-family: "Delius", cursive;
+}
+
+/* 4. VARIABLES */
+
+:root {
+
+    --primary-color: #2563eb;
+    --background-color: #f9fafb;
+    --text-principal-color: #111827;
+    --label-color: #6b7280;
+}
+
+/* 5. DESKTOP */
+
+body {
+    background: #b8b8b872;
+}
+
+#form {
+    background: var(--background-color);
+    border-radius: 20px;
+    padding: 50px;
+}
+
+#form h2 {
+    color: var(--text-principal-color);
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+#vehiculo-form label {
+    font-size: 20px;
+    color: var(--label-color);
+}
+
+#vehiculo-form input {
+    border: 1px solid var(--primary-color);
+    background: var(--background-color);
+    color: var(--primary-color);
+
+
+}
+
+#vehiculo-form input::placeholder {
+    color: var(--primary-color);
+}
+
+#vehiculo-form .btn {
+    margin-top: 2px;
+    background: var(--primary-color);
+    box-shadow: 0 4px 8px 0 var(--primary-color);
+}
+
+#cont-cards {
+   
+    border-radius: 20px;
+    padding: 10px;
+}
+
+#cont-cards h2 {
+    text-align: center;
+    color: var(--text-principal-color);
+}
+
+#contenedor-tarjetas {
+    padding: 30px;
+}
+
+#contenedor-tarjetas .item-vehiculo {
+    padding: 20px;
+}
+
+#contenedor-tarjetas .tarjeta {
+    background: var(--background-color);
+    box-shadow: 0 4px 8px 0 var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+#contenedor-tarjetas .tarjeta .card-body {
+    padding: 20px;
+}
+
+.tarjeta .card-body .card-title {
+    margin-bottom: 15px;
+    color: var(--text-principal-color);
+}
+
+.tarjeta .card-body .card-subtitle {
+    margin-bottom: 15px;
+}
+
+.tarjeta .card-body .card-text {
+    margin-top: 15px;
+}
+
+.tarjeta .card-body .text-success {
+    color: #2563eb !important;
+}
+
+.card-body .contenedor-botones #comprar {
+    box-shadow: 0 4px 8px 0 #198754;
+}
+
+.card-body .contenedor-botones #eliminar {
+    box-shadow: 0 4px 8px 0 #dc3545;
+}
