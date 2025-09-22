@@ -43,6 +43,7 @@ span {
 
 body {
     background: #b8b8b872;
+    overflow-x: hidden ;
 }
 
 #form {
@@ -146,20 +147,24 @@ body {
     border: none;
     background: var(--primary-color);
     color: #fff;
+    z-index: 999;
 }
 
 #cont-carrito {
  background: var(--background-color);
- width: 30%;
+ width: 26%;
  height: 100vh;
  position: absolute;
- right: 0;
+ right: -470px;
  padding: 40px;
  z-index: 1;
+ top: 0;
 }
 
 #cont-carrito .product-card {
     border: 1px solid var(--primary-color);
+    width: 100%;
+    border-radius: 10px;
 }
 
 #cont-carrito .product-card .car-img {
@@ -174,4 +179,9 @@ body {
 #cont-carrito .product-card .button {
     display: flex;
     justify-content: space-between;
+}
+
+#cont-carrito.active {
+    right: 0;
+    transition: .5s;
 }

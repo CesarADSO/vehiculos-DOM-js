@@ -140,4 +140,11 @@ function eventsToVehiculo(nuevaTarjeta) {
     })
 
 }
+    const btnCarrito = document.getElementById('btn-carrito');
+    const contenedorCarrito = document.getElementById('cont-carrito');
+    
+    btnCarrito.addEventListener('click', () =>  {
+        contenedorCarrito.classList.toggle('active');
+    })
+
 
