@@ -147,3 +147,31 @@ body {
     background: var(--primary-color);
     color: #fff;
 }
+
+#cont-carrito {
+ background: var(--background-color);
+ width: 30%;
+ height: 100vh;
+ position: absolute;
+ right: 0;
+ padding: 40px;
+ z-index: 1;
+}
+
+#cont-carrito .product-card {
+    border: 1px solid var(--primary-color);
+}
+
+#cont-carrito .product-card .car-img {
+    width: 150px;
+}
+
+#cont-carrito .product-card .cont-info {
+    /* background: red; */
+    padding-left: 40px;
+}
+
+#cont-carrito .product-card .button {
+    display: flex;
+    justify-content: space-between;
+}

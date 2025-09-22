@@ -22,7 +22,8 @@
                     <!-- Foto (URL) -->
                     <div class="mb-3">
                         <label for="foto" class="form-label">Foto (URL)</label>
-                        <input type="url" class="form-control" placeholder="https://ejemplo.com/auto.jpg" id="foto-input" >
+                        <input type="url" class="form-control" placeholder="https://ejemplo.com/auto.jpg"
+                            id="foto-input">
                     </div>
 
                     <!-- Nombre -->
@@ -46,7 +47,8 @@
                     <!-- Kilometraje -->
                     <div class="mb-3">
                         <label for="kilometraje" class="form-label">Kilometraje</label>
-                        <input type="number" class="form-control" placeholder="Ej: 35000" id="kilometraje-input" required>
+                        <input type="number" class="form-control" placeholder="Ej: 35000" id="kilometraje-input"
+                            required>
                     </div>
 
                     <!-- Precio -->
@@ -55,7 +57,7 @@
                         <input type="number" class="form-control" placeholder="Ej: 50000000" id="precio-input" required>
                     </div>
 
-                    <button id="agregar-vehiculo" type="submit" class= "btn-primary btn">Agregar Vehículo</button>
+                    <button id="agregar-vehiculo" type="submit" class="btn-primary btn">Agregar Vehículo</button>
                 </form>
             </div>
 
@@ -84,10 +86,32 @@
                     <!-- Aquí se irán agregando las demás tarjetas dinámicamente con JS -->
                 </div>
             </div>
-            <button id="btn-carrito"><i class="bi bi-cart3"></i></button>
         </div>
     </section>
-
+    <button id="btn-carrito"><i class="bi bi-cart3"></i></button>
+    <div id="cont-carrito">
+        <h2>Carrito</h2>
+        <hr>
+        <div class="cont-productos">
+            <div class="product-card">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img class="car-img"
+                            src="https://www.buyatoyota.com/sharpr/bat/assets/img/vehicle-info/Corolla/2026/hero-image.png"
+                            alt="Imagen Carro">
+                    </div>
+                    <div class="col-md-8 cont-info">
+                        <h2>Corolla</h2>
+                        <h3>Toyota</h3>
+                        <div class="button">
+                            <h4>$50,000</h4>
+                            <button class="btn-danger btn">X</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
