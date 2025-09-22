@@ -185,3 +185,10 @@ body {
     right: 0;
     transition: .5s;
 }
+
+#cont-carrito p {
+    font-size: 20px;
+    color: var(--text-principal-color);
+    position: absolute;
+    bottom: 0;
+}
