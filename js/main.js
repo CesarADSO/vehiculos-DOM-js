@@ -212,6 +212,9 @@
 
         btnEliminar.addEventListener('click', () => {
             tarjeta.remove();
+            const precio = tarjeta.querySelector('h4').textContent;
+            total = total - parseInt(precio);
+            ValorTotal.textContent = total;
         })
 
         return tarjeta;
