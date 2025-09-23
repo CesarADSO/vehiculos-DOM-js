@@ -6,6 +6,8 @@
     const btnCarrito = document.getElementById('btn-carrito');
     const contenedorCarrito = document.getElementById('cont-carrito');
     const carrito = document.querySelector('.cont-productos');
+    const ValorTotal = document.getElementById('total');
+    let total = 0;
 
 
     form.addEventListener('submit', (e) => {
@@ -143,6 +145,8 @@
             const precio = nuevaTarjeta.querySelector('h2').textContent;
             const nuevaTarjetaCarrito = createProducts(imagen, nombre, marca, precio);
             carrito.appendChild(nuevaTarjetaCarrito);
+            total = total + parseInt(precio);
+            ValorTotal.textContent = total
             
         })
 

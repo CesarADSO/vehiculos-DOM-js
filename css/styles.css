@@ -152,7 +152,7 @@ body {
 
 #cont-carrito {
  background: var(--background-color);
- width: 26%;
+ width: 30%;
  height: 100vh;
  position: absolute;
  right: -470px;
@@ -168,7 +168,7 @@ body {
 }
 
 #cont-carrito .product-card .car-img {
-    width: 150px;
+    width: 160px;
 }
 
 #cont-carrito .product-card .cont-info {
@@ -179,6 +179,14 @@ body {
 #cont-carrito .product-card .button {
     display: flex;
     justify-content: space-between;
+}
+
+#cont-carrito .product-card h3 {
+    color: var(--label-color);
+}
+
+#cont-carrito .product-card .button h4 {
+    color: var(--primary-color);
 }
 
 #cont-carrito.active {
