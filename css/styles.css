@@ -115,18 +115,22 @@ body {
 .tarjeta .card-body .card-title {
     margin-bottom: 15px;
     color: var(--text-principal-color);
+    font-size: 20px;
 }
 
 .tarjeta .card-body .card-subtitle {
     margin-bottom: 15px;
+    font-size: 20px;
 }
 
 .tarjeta .card-body .card-text {
     margin-top: 15px;
+    font-size: 20px;
 }
 
 .tarjeta .card-body .text-success {
     color: #2563eb !important;
+    font-size: 20px;
 }
 
 .card-body .contenedor-botones #comprar {
@@ -161,37 +165,45 @@ body {
  top: 0;
 }
 
-#cont-carrito .product-card {
+#cont-carrito .product-card{
     border: 1px solid var(--primary-color);
-    width: 100%;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
-#cont-carrito .product-card .car-img {
-    width: 160px;
+#cont-carrito .car-img{
+    width: 200px;
 }
 
 #cont-carrito .product-card .cont-info {
-    /* background: red; */
-    padding-left: 40px;
+    padding-left: 90px;
+    padding-top: 5px;
 }
 
-#cont-carrito .product-card .button {
+
+
+
+
+#cont-carrito .product-card .button{
     display: flex;
     justify-content: space-between;
+    align-items: first baseline ;
 }
 
-#cont-carrito .product-card h3 {
-    color: var(--label-color);
+#cont-carrito.active{
+    right: 0;
+    z-index: 1;
+    transition: .5s;
 }
 
-#cont-carrito .product-card .button h4 {
-    color: var(--primary-color);
+#cont-carrito h4{
+    color:var(--primary-color);
+    font-size: 20px;
 }
 
+/* Estilo general del contenedor activo */
 #cont-carrito.active {
     right: 0;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 #cont-carrito p {
