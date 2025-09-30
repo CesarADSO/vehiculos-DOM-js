@@ -258,6 +258,7 @@ function eventsToVehiculo(nuevaTarjeta, idVehiculo) {
         carrito.appendChild(nuevaTarjetaCarrito);
 
         const carritoDeProductos = {
+            id: Date.now(),
             foto: imagen,
             nombre: nombre,
             marca: marca,
@@ -358,8 +359,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         btnEliminar.addEventListener('click', () => {
             tarjeta.remove();
+
+            vehiculosGuardadosEnCarrito = vehiculosGuardadosEnCarrito.filter(v => v.id !== vehiculo.id);
+
+            localStorage.setItem('carrito', JSON.stringify(vehiculosGuardadosEnCarrito))
+
+
             const precio = tarjeta.querySelector('h4').textContent;
+
             total = total - parseInt(precio);
+
             ValorTotal.textContent = total;
         })
 
