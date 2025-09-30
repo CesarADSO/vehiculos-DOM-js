@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
         segundoH4.textContent = vehiculo.modelo;
 
         const tercerH4 = document.createElement('h4');
-        tercerH4.classList.add('card-text');
+        tercerH4.classList.add('card-texts');
         tercerH4.textContent = vehiculo.kilometraje;
 
         const h2 = document.createElement('h2');
@@ -252,13 +252,13 @@ function eventsToVehiculo(nuevaTarjeta, idVehiculo) {
         const nombre = nuevaTarjeta.querySelector('h3').textContent;
         const marca = nuevaTarjeta.querySelector('h4').textContent;
         const modelo = nuevaTarjeta.querySelector('.card-text').textContent;
-        const kilometraje = nuevaTarjeta.querySelector('.card-text').textContent;
+        const kilometraje = nuevaTarjeta.querySelector('.card-texts').textContent;
         const precio = nuevaTarjeta.querySelector('h2').textContent;
         const nuevaTarjetaCarrito = createProducts(imagen, nombre, marca, precio);
         carrito.appendChild(nuevaTarjetaCarrito);
 
         const carritoDeProductos = {
-            id: Date.now(),
+            id: idVehiculo,
             foto: imagen,
             nombre: nombre,
             marca: marca,
@@ -272,6 +272,9 @@ function eventsToVehiculo(nuevaTarjeta, idVehiculo) {
         vehiculosGuardadosEnCarrito.push(carritoDeProductos)
 
         localStorage.setItem('carrito', JSON.stringify(vehiculosGuardadosEnCarrito));
+
+        total = total + parseInt(precio);
+        ValorTotal.textContent = total
 
     })
 
@@ -316,6 +319,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const img = document.createElement('img');
         img.classList.add('car-img');
         img.setAttribute('src', vehiculo.foto);
+        
 
         const col2 = document.createElement('div');
         col2.classList.add('col-md-8', 'cont-info');
@@ -357,6 +361,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         carrito.appendChild(tarjeta);
 
+        total = total + parseInt(vehiculo.precio)
+        ValorTotal.textContent = total
+
         btnEliminar.addEventListener('click', () => {
             tarjeta.remove();
 
@@ -370,6 +377,8 @@ document.addEventListener('DOMContentLoaded', () => {
             total = total - parseInt(precio);
 
             ValorTotal.textContent = total;
+
+        
         })
 
         return tarjeta;

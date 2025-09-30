@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         tdKilometraje.textContent = vehiculo.kilometraje;
 
         const tdPrecio = document.createElement('td');
-        tdPrecio.textContent = vehiculo.tdPrecio;
+        tdPrecio.textContent = vehiculo.precio;
         
         fila.appendChild(tdImagen);
         fila.appendChild(tdNombre);
