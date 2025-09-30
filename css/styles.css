@@ -212,3 +212,27 @@ body {
     position: absolute;
     bottom: 0;
 }
+
+.btn-carro {
+  display: inline-block;
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #0d6efd, #0a58ca); /* Azul degradado */
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  transition: all 0.3s ease;
+}
+
+.btn-carro:hover {
+  background: linear-gradient(135deg, #084298, #052c65); /* Azul más oscuro */
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+}
+
+.btn-carro:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}

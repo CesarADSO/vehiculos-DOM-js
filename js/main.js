@@ -258,7 +258,7 @@ function eventsToVehiculo(nuevaTarjeta, idVehiculo) {
         carrito.appendChild(nuevaTarjetaCarrito);
 
         const carritoDeProductos = {
-            id: idVehiculo,
+            id: Date.now(),
             foto: imagen,
             nombre: nombre,
             marca: marca,
