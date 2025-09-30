@@ -24,15 +24,21 @@ form.addEventListener('submit', (e) => {
 
 
 
-    const valorFoto = document.getElementById('foto-input').value;
+    let valorFoto = document.getElementById('foto-input').value;
     const valorNombre = document.getElementById('nombre-input').value;
     const valorMarca = document.getElementById('marca-input').value;
     const valorModelo = document.getElementById('modelo-input').value;
     const valorKm = document.getElementById('kilometraje-input').value;
     const valorPrecio = document.getElementById('precio-input').value;
 
-    if (valorFoto == "" || valorNombre == "" || valorMarca == "" || valorModelo == "" || valorKm == "" || valorPrecio == "") {
+    if (valorFoto == "") {
+        valorFoto = 'https://revistadiners.com.co/wp-content/uploads/2019/06/audi_1200x800.jpg';
+        alert("Gracias por confiar en nosotros");
+    }
+
+    if ( valorNombre == "" || valorMarca == "" || valorModelo == "" || valorKm == "" || valorPrecio == "") {
         alert('Por favor es obligatorio llenar todos los campos que están en la interfaz');
+        return;
     }
     else {
 
@@ -162,8 +168,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // ESTA FUNCIÓN LO QUE HACE ES CREARNOS LAS TARJETAS DINÁMICAS PERO DE MANERA TEMPORAL Y PINTARLAS EN LA INTERFAZ
-function createVehiculoCard(valorFoto, valorNombre, valorMarca, valorModelo, valorKm, valorPrecio) {
+function createVehiculoCard(url, valorNombre, valorMarca, valorModelo, valorKm, valorPrecio) {
 
+    const fotoFinal = url || 'https://revistadiners.com.co/wp-content/uploads/2019/06/audi_1200x800.jpg';
 
     const col = document.createElement('div');
     col.classList.add('col-md-6', 'item-vehiculo');
@@ -173,7 +180,7 @@ function createVehiculoCard(valorFoto, valorNombre, valorMarca, valorModelo, val
 
     const imagen = document.createElement('img');
     imagen.classList.add('card-img-top', 'w-100');
-    imagen.setAttribute('src', valorFoto);
+    imagen.setAttribute('src', fotoFinal);
 
 
     const cuerpoTarjeta = document.createElement('div');
