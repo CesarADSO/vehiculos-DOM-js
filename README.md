@@ -1,5 +1,7 @@
 # Proyecto Carrito de Vehículos
 
+Visitar website: https://cesaradso.github.io/vehiculos-DOM-js/
+
 Este repositorio contiene un proyecto web interactivo que permite **gestionar vehículos** (agregar, listar y eliminar) y añadirlos a un **carrito de compras dinámico** con persistencia en `localStorage`. Está desarrollado en **HTML, CSS y JavaScript puro**, pensado para practicar el manejo del DOM, eventos y almacenamiento local.
 
 ---
@@ -90,9 +92,9 @@ Las contribuciones son bienvenidas. Para colaborar:
 
 Si deseas conectar conmigo, puedes hacerlo a través de:
 
-* GitHub: [Tu perfil aquí]
-* LinkedIn: [Tu perfil aquí]
-* Correo: [Tu correo aquí]
+* GitHub: https://github.com/CesarADSO
+* LinkedIn: https://www.linkedin.com/in/cesarr-c-morales-gonz%C3%A1lez-1b182a352/
+* Correo: cesaramorales1103@gmail.com
 
 ---
 
