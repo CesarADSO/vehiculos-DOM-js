@@ -165,28 +165,72 @@ body {
  top: 0;
 }
 
-#cont-carrito .product-card{
-    border: 1px solid var(--primary-color);
-    border-radius: 8px;
-}
-
-#cont-carrito .car-img{
-    width: 200px;
-}
-
-#cont-carrito .product-card .cont-info {
-    padding-left: 90px;
-    padding-top: 5px;
-}
-
-
-
-
-
-#cont-carrito .product-card .button{
-    display: flex;
+.product-card {
+    display: flex;               
+    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
-    align-items: first baseline ;
+    background-color: #ffffff;   
+    border-radius: 10px;         
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    padding: 10px 15px;
+    margin-bottom: 10px;         
+    transition: transform 0.2s;  
+}
+
+.product-card:hover {
+    transform: translateY(-3px); 
+}
+
+.product-card img.car-img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.cont-info {
+    flex: 1;                     
+    margin-left: 50px;
+}
+
+.cont-info h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.cont-info h3 {
+    margin: 2px 0 5px 0;
+    font-size: 1rem;
+    color: #777;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.button h4 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color:var(--primary-color);
+}
+
+.button .btn-danger {
+    background-color: #ff4d4f;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.button .btn-danger:hover {
+    background-color: #e04344;
 }
 
 #cont-carrito.active{
@@ -195,16 +239,6 @@ body {
     transition: .5s;
 }
 
-#cont-carrito h4{
-    color:var(--primary-color);
-    font-size: 20px;
-}
-
-/* Estilo general del contenedor activo */
-#cont-carrito.active {
-    right: 0;
-    transition: 0.5s;
-}
 
 #cont-carrito p {
     font-size: 20px;
@@ -237,3 +271,13 @@ body {
   transform: translateY(0) scale(0.98);
   box-shadow: 0 3px 8px rgba(0,0,0,0.2);
 }
+
+.cont-productos {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    overflow-x: hidden;
+}
+

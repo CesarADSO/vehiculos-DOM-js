@@ -374,6 +374,8 @@ document.addEventListener('DOMContentLoaded', () => {
         btnEliminar.addEventListener('click', () => {
             tarjeta.remove();
 
+            let vehiculosGuardadosEnCarrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
             vehiculosGuardadosEnCarrito = vehiculosGuardadosEnCarrito.filter(v => v.id !== vehiculo.id);
 
             localStorage.setItem('carrito', JSON.stringify(vehiculosGuardadosEnCarrito))
